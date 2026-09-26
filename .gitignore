@@ -1,0 +1,13 @@
+# Raw competition data (large, provided by the competition — not versioned)
+*.tsv
+!Documentation_template.md
+
+# Generated profiling reports (large HTML, regenerable from EDA scripts)
+*_profile.html
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
