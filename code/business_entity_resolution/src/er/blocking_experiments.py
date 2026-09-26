@@ -67,6 +67,67 @@ SUITES = {
             "tfidf_nabp+keys_all": ["tfidf_nabp", "name_exact", "name_core", "addr_exact", "addr_set"],
         },
     },
+    # P2-E1b: how to add phonetic evidence without over-weighting names
+    "v2b": {
+        "keys": [],
+        "tfidf": {
+            "tfidf_nab": TfidfParams(namespaces="nab", top_k=100),
+            "tfidf_nabp_p0.25": TfidfParams(namespaces="nabp", top_k=100, ns_weights={"p": 0.25}),
+            "tfidf_nabp_p0.5": TfidfParams(namespaces="nabp", top_k=100, ns_weights={"p": 0.5}),
+            "tfidf_nabp_p0.75": TfidfParams(namespaces="nabp", top_k=100, ns_weights={"p": 0.75}),
+            "tfidf_pab": TfidfParams(namespaces="pab", top_k=100),
+        },
+        "fusions": {"fuse_nab_pab": ("tfidf_nab", "tfidf_pab", 100)},
+        "k_sweep": None,
+        "unions": {},
+        "segments": ["tfidf_nab", "tfidf_nabp_p0.25", "tfidf_nabp_p0.5", "tfidf_nabp_p0.75", "fuse_nab_pab"],
+    },
+    # P2-E2: confirm the P2-E1b front-runners at 20k (baseline sample and a disjoint seed),
+    # across candidate budgets (fixed K and score-relative cut)
+    "confirm": {
+        "keys": [],
+        "tfidf": {
+            "tfidf_nab": TfidfParams(namespaces="nab", top_k=100),
+            "tfidf_nabp_p0.25": TfidfParams(namespaces="nabp", top_k=100, ns_weights={"p": 0.25}),
+            "tfidf_pab": TfidfParams(namespaces="pab", top_k=100),
+        },
+        "fusions": {"fuse_nab_pab": ("tfidf_nab", "tfidf_pab", 100)},
+        "k_sweep": [(b, [10, 20, 30, 50]) for b in ("tfidf_nab", "tfidf_nabp_p0.25", "fuse_nab_pab")],
+        "rel_sweep": [(b, [0.3, 0.5, 0.7], 5, 100) for b in ("tfidf_nabp_p0.25", "fuse_nab_pab")],
+        "unions": {},
+        "segments": ["tfidf_nab", "tfidf_nabp_p0.25", "fuse_nab_pab", "tfidf_nabp_p0.25@20", "fuse_nab_pab@20"],
+    },
+    # P2-E3: retrieval cap (df above which a feature is not used to retrieve) and depth, under fusion
+    "cap2": {
+        "keys": [],
+        "tfidf": {
+            "nab_c5k": TfidfParams(namespaces="nab", cap_df=5_000), "pab_c5k": TfidfParams(namespaces="pab", cap_df=5_000),
+            "nab_c20k": TfidfParams(namespaces="nab"), "pab_c20k": TfidfParams(namespaces="pab"),
+            "nab_c100k": TfidfParams(namespaces="nab", cap_df=100_000, work_budget=6e7),
+            "pab_c100k": TfidfParams(namespaces="pab", cap_df=100_000, work_budget=6e7),
+            "nab_r1000": TfidfParams(namespaces="nab", top_r=1000), "pab_r1000": TfidfParams(namespaces="pab", top_r=1000),
+        },
+        "fusions": {f"fuse_{v}": (f"nab_{v}", f"pab_{v}", 100) for v in ("c5k", "c20k", "c100k", "r1000")},
+        "k_sweep": [(f"fuse_{v}", [20, 50]) for v in ("c5k", "c20k", "c100k", "r1000")],
+        "unions": {},
+        "segments": [],
+    },
+    # P2-E3b: cheaper ways to recover the cap-100k gain (all with retrieval depth 1000)
+    "cap3": {
+        "keys": [],
+        "tfidf": {
+            "nab_r1000": TfidfParams(namespaces="nab", top_r=1000),
+            "pab_r1000": TfidfParams(namespaces="pab", top_r=1000),
+            "nab_min3": TfidfParams(namespaces="nab", top_r=1000, min_feats=3, hard_cap_df=200_000, work_budget=6e7),
+            "pab_min3": TfidfParams(namespaces="pab", top_r=1000, min_feats=3, hard_cap_df=200_000, work_budget=6e7),
+            "nab_c50k": TfidfParams(namespaces="nab", top_r=1000, cap_df=50_000, work_budget=6e7),
+            "pab_c50k": TfidfParams(namespaces="pab", top_r=1000, cap_df=50_000, work_budget=6e7),
+        },
+        "fusions": {f"fuse_{v}": (f"nab_{v}", f"pab_{v}", 100) for v in ("r1000", "min3", "c50k")},
+        "k_sweep": [(f"fuse_{v}", [20, 50]) for v in ("r1000", "min3", "c50k")],
+        "unions": {},
+        "segments": ["fuse_r1000", "fuse_min3", "fuse_c50k"],
+    },
     # posting-length cap and retrieval depth
     "cap": {
         "keys": [],
@@ -80,6 +141,40 @@ SUITES = {
         "unions": {},
     },
 }
+
+
+def _ids_only(ranked_per_source: dict) -> dict:
+    return {s: v[0] for s, v in ranked_per_source.items()}
+
+
+def _fuse(a: tuple, b: tuple, k: int) -> tuple:
+    """Late fusion of two ranked candidate lists (per query): each candidate keeps its
+    best score from either list; the top k by that score are kept."""
+    out_ids, out_scores = [], []
+    for ia, sa, ib, sb in zip(a[0], a[1], b[0], b[1]):
+        best = {}
+        for i, s in zip(ia, sa):
+            best[i] = s
+        for i, s in zip(ib, sb):
+            if s > best.get(i, -1.0):
+                best[i] = s
+        top = sorted(best.items(), key=lambda x: -x[1])[:k]
+        out_ids.append([t[0] for t in top])
+        out_scores.append([t[1] for t in top])
+    return out_ids, out_scores
+
+
+def _relative_cut(ranked_per_source: dict, n: int, ratio: float, k_min: int, k_max: int) -> list:
+    """Per query and source: keep candidates scoring >= ratio x the best score, at least k_min, at most k_max."""
+    out = [set() for _ in range(n)]
+    for ids_lists, score_lists in ranked_per_source.values():
+        for i, (ids, sc) in enumerate(zip(ids_lists, score_lists)):
+            if not ids:
+                continue
+            thr = ratio * sc[0]
+            m = sum(1 for s in sc[:k_max] if s >= thr)
+            out[i].update(ids[:min(k_max, max(k_min, m))])
+    return out
 
 
 def _as_sets(per_source: dict, n: int, k: int = None) -> list:
@@ -170,25 +265,39 @@ def run(n_queries: int, suite: str, seed: int, save_candidates: str = None):
         with Tracker() as t:
             for s in TARGETS:
                 outs = tfidf_candidates_by_country("train", s, queries, params, timings)
-                for n, (rows, _scores) in zip(names, outs):
-                    per_variant[n][s] = rows_to_ids(ent_ids[s], rows)
+                for n, (rows, scores) in zip(names, outs):
+                    per_variant[n][s] = (rows_to_ids(ent_ids[s], rows), [sc.tolist() for sc in scores])
         load_share = timings.get("load", 0.0) / len(names)
         print(f"  (tfidf: index load {timings.get('load', 0):.1f}s shared by {len(names)} variants; "
               f"peak {t.peak_rss_gb:.2f} GB for the whole block)", flush=True)
         for v, n in enumerate(names):
             ranked[n] = per_variant[n]
-            cands[n] = _as_sets(per_variant[n], len(queries))
+            cands[n] = _as_sets(_ids_only(ranked[n]), len(queries))
             secs = timings[f"variant_{v}"] + load_share
             results.append(_evaluate(n, json.dumps(spec["tfidf"][n].__dict__), cands[n], queries, truth,
                                      pool_size, secs, t.peak_rss_gb, run_id))
 
-    if spec.get("k_sweep"):
-        base, ks = spec["k_sweep"]
+    for fname, (a, b, k) in spec.get("fusions", {}).items():
+        ranked[fname] = {s: _fuse(ranked[a][s], ranked[b][s], k) for s in TARGETS}
+        cands[fname] = _as_sets(_ids_only(ranked[fname]), len(queries))
+        results.append(_evaluate(fname, f"max-score fusion of {a} and {b}, top {k}/source", cands[fname],
+                                 queries, truth, pool_size, None, None, run_id))
+
+    k_sweeps = spec.get("k_sweep") or []
+    for base, ks in ([k_sweeps] if isinstance(k_sweeps, tuple) else k_sweeps):
         for k in ks:
-            sets = _as_sets(ranked[base], len(queries), k)
+            sets = _as_sets(_ids_only(ranked[base]), len(queries), k)
             cands[f"{base}@{k}"] = sets
             results.append(_evaluate(f"{base}@{k}/source", f"top_k per source={k}", sets, queries, truth,
                                      pool_size, None, None, run_id))
+
+    rel_sweeps = spec.get("rel_sweep") or []
+    for base, ratios, k_min, k_max in ([rel_sweeps] if isinstance(rel_sweeps, tuple) else rel_sweeps):
+        for r in ratios:
+            sets = _relative_cut(ranked[base], len(queries), r, k_min, k_max)
+            cands[f"{base}@rel{r}"] = sets
+            results.append(_evaluate(f"{base}@rel{r}", f"keep score >= {r} x top score; min {k_min}, max {k_max}/source",
+                                     sets, queries, truth, pool_size, None, None, run_id))
 
     for uname, members in spec["unions"].items():
         sets = [set().union(*(cands[m][i] for m in members)) for i in range(len(queries))]
@@ -196,8 +305,9 @@ def run(n_queries: int, suite: str, seed: int, save_candidates: str = None):
         results.append(_evaluate(uname, "+".join(members), sets, queries, truth, pool_size, None, None, run_id))
 
     segments = {}
-    for name in [n for n in ("tfidf_nab", "tfidf_nab@20", "tfidf_nab+keys_all", "tfidf_nabp", "tfidf_nabp@20",
-                             "tfidf_nabp+keys_all", "nab_cap20k") if n in cands]:
+    seg_names = spec.get("segments", ["tfidf_nab", "tfidf_nab@20", "tfidf_nab+keys_all", "tfidf_nabp",
+                                      "tfidf_nabp@20", "tfidf_nabp+keys_all", "nab_cap20k"])
+    for name in [n for n in seg_names if n in cands]:
         segments[name] = _segments(cands[name], queries, truth, target_attr)
 
     _write(run_id, results, segments, suite, n_queries)

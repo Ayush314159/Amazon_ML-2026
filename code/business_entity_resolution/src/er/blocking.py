@@ -37,6 +37,8 @@ class TfidfParams:
     top_k: int = 100             # kept per query after full-cosine rescoring
     rescore: bool = True
     work_budget: float = 3e7     # posting entries touched per sparse-matmul batch (bounds memory)
+    min_feats: int = 1           # each query retrieves with at least this many of its rarest features...
+    hard_cap_df: int = 0         # ...as long as their df <= hard_cap_df (0: only the single-rarest fallback)
     ns_weights: dict = field(default_factory=dict)  # query-side multiplier per namespace (default 1.0)
 
 
@@ -58,13 +60,27 @@ def _query_matrix(index: PartitionIndex, name_norm, addr_norm, namespaces: str, 
     return l2_normalize_rows(Q)
 
 
-def _retrieval_matrix(index: PartitionIndex, Q: sp.csr_matrix, cap_df: int) -> sp.csr_matrix:
-    """Keep only features with df <= cap_df; a query left with none keeps its single rarest feature."""
+def _retrieval_matrix(index: PartitionIndex, Q: sp.csr_matrix, cap_df: int,
+                      min_feats: int = 1, hard_cap_df: int = 0) -> sp.csr_matrix:
+    """Keep only features with df <= cap_df for retrieval. A query with fewer than
+    `min_feats` kept features is topped up with its rarest remaining features whose
+    df <= hard_cap_df; a query still left with none keeps its single rarest feature."""
     df = index.df[Q.indices]
     keep = df <= cap_df
     rows = np.repeat(np.arange(Q.shape[0]), np.diff(Q.indptr))
-    has_kept = np.bincount(rows[keep], minlength=Q.shape[0]) > 0
-    for r in np.flatnonzero(~has_kept):
+    n_kept = np.bincount(rows[keep], minlength=Q.shape[0])
+    if min_feats > 1 and hard_cap_df > cap_df:
+        for r in np.flatnonzero(n_kept < min_feats):
+            a, b = Q.indptr[r], Q.indptr[r + 1]
+            need = min_feats - n_kept[r]
+            for j in a + np.argsort(df[a:b], kind="stable"):
+                if need == 0 or df[j] > hard_cap_df:
+                    break
+                if not keep[j]:
+                    keep[j] = True
+                    need -= 1
+            n_kept[r] = min_feats - need
+    for r in np.flatnonzero(n_kept == 0):
         a, b = Q.indptr[r], Q.indptr[r + 1]
         if b > a:
             keep[a + np.argmin(df[a:b])] = True
@@ -85,7 +101,7 @@ def _top(indices: np.ndarray, scores: np.ndarray, k: int):
 def tfidf_candidates(index: PartitionIndex, name_norm, addr_norm, p: TfidfParams) -> tuple:
     """Returns (list of store-row arrays, list of score arrays), both ranked by score."""
     Q = _query_matrix(index, name_norm, addr_norm, p.namespaces, p.ns_weights)
-    R = _retrieval_matrix(index, Q, p.cap_df)
+    R = _retrieval_matrix(index, Q, p.cap_df, p.min_feats, p.hard_cap_df)
     n = R.shape[0]
     row_of = np.repeat(np.arange(n), np.diff(R.indptr))
     work = np.bincount(row_of, weights=index.df[R.indices].astype(np.float64), minlength=n)

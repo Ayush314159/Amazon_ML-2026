@@ -27,7 +27,7 @@ import scipy.sparse as sp
 from sklearn.feature_extraction import FeatureHasher
 
 from . import config
-from .normalize import addr_set_key, name_core_key, phonetic_key
+from .normalize import LEGAL_FORMS, addr_set_key, name_core_key, phonetic_key
 from .resources import Tracker, available_gb
 from .store import store_path
 
@@ -51,7 +51,7 @@ def record_features(name_norm: str, addr_norm: str) -> list:
     feats = ["n:" + t for t in nt]
     feats += ["a:" + t for t in at]
     feats += ["b:" + at[i] + "_" + at[i + 1] for i in range(len(at) - 1) if at[i].isdigit()]
-    feats += ["p:" + k for k in {phonetic_key(t) for t in nt} if k]
+    feats += ["p:" + k for k in {phonetic_key(t) for t in nt if t not in LEGAL_FORMS} if k]
     return feats
 
 

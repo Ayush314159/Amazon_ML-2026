@@ -1,0 +1,360 @@
+{
+  "results": [
+    {
+      "run_id": "blk_v2b_5000_20260926_173256",
+      "date": "2026-09-26",
+      "strategy": "tfidf_nab",
+      "params": "norm_v2; {\"namespaces\": \"nab\", \"cap_df\": 20000, \"top_r\": 300, \"top_k\": 100, \"rescore\": true, \"work_budget\": 30000000.0, \"ns_weights\": {}}",
+      "n_queries": 5000,
+      "pair_recall": 0.982333,
+      "entity_full_coverage": 0.946198,
+      "oracle_f05": 0.993326,
+      "cands_mean": 200.0,
+      "cands_p50": 200.0,
+      "cands_p95": 200.0,
+      "cands_max": 200,
+      "zero_cand_share": 0.0,
+      "reduction_ratio": 0.999981,
+      "seconds": 16.51,
+      "sec_per_1k_queries": 3.301,
+      "peak_rss_gb": 3.1
+    },
+    {
+      "run_id": "blk_v2b_5000_20260926_173256",
+      "date": "2026-09-26",
+      "strategy": "tfidf_nabp_p0.25",
+      "params": "norm_v2; {\"namespaces\": \"nabp\", \"cap_df\": 20000, \"top_r\": 300, \"top_k\": 100, \"rescore\": true, \"work_budget\": 30000000.0, \"ns_weights\": {\"p\": 0.25}}",
+      "n_queries": 5000,
+      "pair_recall": 0.984187,
+      "entity_full_coverage": 0.951917,
+      "oracle_f05": 0.99429,
+      "cands_mean": 200.0,
+      "cands_p50": 200.0,
+      "cands_p95": 200.0,
+      "cands_max": 200,
+      "zero_cand_share": 0.0,
+      "reduction_ratio": 0.999981,
+      "seconds": 18.02,
+      "sec_per_1k_queries": 3.604,
+      "peak_rss_gb": 3.1
+    },
+    {
+      "run_id": "blk_v2b_5000_20260926_173256",
+      "date": "2026-09-26",
+      "strategy": "tfidf_nabp_p0.5",
+      "params": "norm_v2; {\"namespaces\": \"nabp\", \"cap_df\": 20000, \"top_r\": 300, \"top_k\": 100, \"rescore\": true, \"work_budget\": 30000000.0, \"ns_weights\": {\"p\": 0.5}}",
+      "n_queries": 5000,
+      "pair_recall": 0.983376,
+      "entity_full_coverage": 0.949587,
+      "oracle_f05": 0.993896,
+      "cands_mean": 200.0,
+      "cands_p50": 200.0,
+      "cands_p95": 200.0,
+      "cands_max": 200,
+      "zero_cand_share": 0.0,
+      "reduction_ratio": 0.999981,
+      "seconds": 18.32,
+      "sec_per_1k_queries": 3.664,
+      "peak_rss_gb": 3.1
+    },
+    {
+      "run_id": "blk_v2b_5000_20260926_173256",
+      "date": "2026-09-26",
+      "strategy": "tfidf_nabp_p0.75",
+      "params": "norm_v2; {\"namespaces\": \"nabp\", \"cap_df\": 20000, \"top_r\": 300, \"top_k\": 100, \"rescore\": true, \"work_budget\": 30000000.0, \"ns_weights\": {\"p\": 0.75}}",
+      "n_queries": 5000,
+      "pair_recall": 0.981986,
+      "entity_full_coverage": 0.944927,
+      "oracle_f05": 0.993586,
+      "cands_mean": 200.0,
+      "cands_p50": 200.0,
+      "cands_p95": 200.0,
+      "cands_max": 200,
+      "zero_cand_share": 0.0,
+      "reduction_ratio": 0.999981,
+      "seconds": 18.54,
+      "sec_per_1k_queries": 3.709,
+      "peak_rss_gb": 3.1
+    },
+    {
+      "run_id": "blk_v2b_5000_20260926_173256",
+      "date": "2026-09-26",
+      "strategy": "tfidf_pab",
+      "params": "norm_v2; {\"namespaces\": \"pab\", \"cap_df\": 20000, \"top_r\": 300, \"top_k\": 100, \"rescore\": true, \"work_budget\": 30000000.0, \"ns_weights\": {}}",
+      "n_queries": 5000,
+      "pair_recall": 0.967041,
+      "entity_full_coverage": 0.898962,
+      "oracle_f05": 0.988985,
+      "cands_mean": 200.0,
+      "cands_p50": 200.0,
+      "cands_p95": 200.0,
+      "cands_max": 200,
+      "zero_cand_share": 0.0,
+      "reduction_ratio": 0.999981,
+      "seconds": 15.57,
+      "sec_per_1k_queries": 3.114,
+      "peak_rss_gb": 3.1
+    },
+    {
+      "run_id": "blk_v2b_5000_20260926_173256",
+      "date": "2026-09-26",
+      "strategy": "fuse_nab_pab",
+      "params": "norm_v2; max-score fusion of tfidf_nab and tfidf_pab, top 100/source",
+      "n_queries": 5000,
+      "pair_recall": 0.984708,
+      "entity_full_coverage": 0.952129,
+      "oracle_f05": 0.99428,
+      "cands_mean": 200.0,
+      "cands_p50": 200.0,
+      "cands_p95": 200.0,
+      "cands_max": 200,
+      "zero_cand_share": 0.0,
+      "reduction_ratio": 0.999981,
+      "seconds": "",
+      "sec_per_1k_queries": "",
+      "peak_rss_gb": ""
+    }
+  ],
+  "segments": {
+    "tfidf_nab": {
+      "q_country": {
+        "India": {
+          "recall": 0.969,
+          "pairs": 6712
+        },
+        "US": {
+          "recall": 0.9908,
+          "pairs": 10552
+        }
+      },
+      "t_source": {
+        "S2": {
+          "recall": 0.9829,
+          "pairs": 8258
+        },
+        "S3": {
+          "recall": 0.9818,
+          "pairs": 9006
+        }
+      },
+      "t_indic_name": {
+        "False": {
+          "recall": 0.9875,
+          "pairs": 16052
+        },
+        "True": {
+          "recall": 0.9134,
+          "pairs": 1212
+        }
+      },
+      "t_empty_addr": {
+        "False": {
+          "recall": 0.9871,
+          "pairs": 16477
+        },
+        "True": {
+          "recall": 0.8831,
+          "pairs": 787
+        }
+      },
+      "same_country": {
+        "True": {
+          "recall": 0.9823,
+          "pairs": 17264
+        }
+      }
+    },
+    "tfidf_nabp_p0.25": {
+      "q_country": {
+        "India": {
+          "recall": 0.9729,
+          "pairs": 6712
+        },
+        "US": {
+          "recall": 0.9914,
+          "pairs": 10552
+        }
+      },
+      "t_source": {
+        "S2": {
+          "recall": 0.985,
+          "pairs": 8258
+        },
+        "S3": {
+          "recall": 0.9835,
+          "pairs": 9006
+        }
+      },
+      "t_indic_name": {
+        "False": {
+          "recall": 0.9887,
+          "pairs": 16052
+        },
+        "True": {
+          "recall": 0.9241,
+          "pairs": 1212
+        }
+      },
+      "t_empty_addr": {
+        "False": {
+          "recall": 0.9878,
+          "pairs": 16477
+        },
+        "True": {
+          "recall": 0.9085,
+          "pairs": 787
+        }
+      },
+      "same_country": {
+        "True": {
+          "recall": 0.9842,
+          "pairs": 17264
+        }
+      }
+    },
+    "tfidf_nabp_p0.5": {
+      "q_country": {
+        "India": {
+          "recall": 0.9739,
+          "pairs": 6712
+        },
+        "US": {
+          "recall": 0.9894,
+          "pairs": 10552
+        }
+      },
+      "t_source": {
+        "S2": {
+          "recall": 0.9841,
+          "pairs": 8258
+        },
+        "S3": {
+          "recall": 0.9827,
+          "pairs": 9006
+        }
+      },
+      "t_indic_name": {
+        "False": {
+          "recall": 0.9875,
+          "pairs": 16052
+        },
+        "True": {
+          "recall": 0.9282,
+          "pairs": 1212
+        }
+      },
+      "t_empty_addr": {
+        "False": {
+          "recall": 0.9864,
+          "pairs": 16477
+        },
+        "True": {
+          "recall": 0.9199,
+          "pairs": 787
+        }
+      },
+      "same_country": {
+        "True": {
+          "recall": 0.9834,
+          "pairs": 17264
+        }
+      }
+    },
+    "tfidf_nabp_p0.75": {
+      "q_country": {
+        "India": {
+          "recall": 0.9739,
+          "pairs": 6712
+        },
+        "US": {
+          "recall": 0.9871,
+          "pairs": 10552
+        }
+      },
+      "t_source": {
+        "S2": {
+          "recall": 0.9833,
+          "pairs": 8258
+        },
+        "S3": {
+          "recall": 0.9808,
+          "pairs": 9006
+        }
+      },
+      "t_indic_name": {
+        "False": {
+          "recall": 0.986,
+          "pairs": 16052
+        },
+        "True": {
+          "recall": 0.9282,
+          "pairs": 1212
+        }
+      },
+      "t_empty_addr": {
+        "False": {
+          "recall": 0.9848,
+          "pairs": 16477
+        },
+        "True": {
+          "recall": 0.9238,
+          "pairs": 787
+        }
+      },
+      "same_country": {
+        "True": {
+          "recall": 0.982,
+          "pairs": 17264
+        }
+      }
+    },
+    "fuse_nab_pab": {
+      "q_country": {
+        "India": {
+          "recall": 0.9753,
+          "pairs": 6712
+        },
+        "US": {
+          "recall": 0.9907,
+          "pairs": 10552
+        }
+      },
+      "t_source": {
+        "S2": {
+          "recall": 0.9864,
+          "pairs": 8258
+        },
+        "S3": {
+          "recall": 0.9831,
+          "pairs": 9006
+        }
+      },
+      "t_indic_name": {
+        "False": {
+          "recall": 0.9874,
+          "pairs": 16052
+        },
+        "True": {
+          "recall": 0.9488,
+          "pairs": 1212
+        }
+      },
+      "t_empty_addr": {
+        "False": {
+          "recall": 0.9896,
+          "pairs": 16477
+        },
+        "True": {
+          "recall": 0.8818,
+          "pairs": 787
+        }
+      },
+      "same_country": {
+        "True": {
+          "recall": 0.9847,
+          "pairs": 17264
+        }
+      }
+    }
+  }
+}
