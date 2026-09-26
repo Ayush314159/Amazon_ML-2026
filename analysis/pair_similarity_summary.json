@@ -1,0 +1,32 @@
+{
+  "n_pairs_sampled": 19437,
+  "name_exact_pct": 4.697,
+  "name_norm_exact_pct": 25.997,
+  "name_nosuffix_exact_pct": 46.02,
+  "name_jaccard_mean": 0.6401,
+  "name_jaccard_median": 0.6667,
+  "name_jaccard_p10": 0.0,
+  "name_levratio_mean": 0.7157,
+  "name_levratio_p10": 0.2632,
+  "addr_exact_pct": 2.166,
+  "addr_norm_exact_pct": 8.468,
+  "addr_jaccard_mean": 0.6083,
+  "addr_jaccard_median": 0.6667,
+  "addr_jaccard_p10": 0.25,
+  "by_country": {
+    "India": {
+      "n": 7770,
+      "name_jaccard_mean": 0.5437,
+      "addr_jaccard_mean": 0.6912,
+      "name_norm_exact_pct": 19.266
+    },
+    "US": {
+      "n": 11667,
+      "name_jaccard_mean": 0.7042,
+      "addr_jaccard_mean": 0.5531,
+      "name_norm_exact_pct": 30.479
+    }
+  },
+  "pct_true_matches_missed_by_exact_name_block": 74.003,
+  "pct_true_matches_missed_by_low_jaccard_lt_0.2": 14.843
+}

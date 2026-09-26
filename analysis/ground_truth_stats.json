@@ -1,0 +1,76 @@
+{
+  "n_s1_entities": 2206821,
+  "singleton_count": 123247,
+  "singleton_pct": 5.5848,
+  "one_match_count": 119157,
+  "one_match_pct": 5.3995,
+  "multi_match_count": 1964417,
+  "multi_match_pct": 89.0157,
+  "total_match_pairs": 7638365,
+  "total_s2_matches": 3693619,
+  "total_s3_matches": 3944746,
+  "match_count_distribution": {
+    "0": 123247,
+    "1": 119157,
+    "2": 375212,
+    "3": 530841,
+    "4": 484115,
+    "5": 321957,
+    "6": 164868,
+    "7": 63968,
+    "8": 18680,
+    "9": 4205,
+    "10": 534,
+    "11": 37
+  },
+  "s2_count_distribution": {
+    "0": 287745,
+    "1": 789108,
+    "2": 652779,
+    "3": 333957,
+    "4": 119078,
+    "5": 24154
+  },
+  "s3_count_distribution": {
+    "0": 266276,
+    "1": 716417,
+    "2": 668375,
+    "3": 372443,
+    "4": 145116,
+    "5": 35378,
+    "6": 2816
+  },
+  "modality_only_s2": 143029,
+  "modality_only_s3": 164498,
+  "modality_both": 1776047,
+  "modality_only_s2_pct": 6.4812,
+  "modality_only_s3_pct": 7.4541,
+  "modality_both_pct": 80.4799,
+  "total_matched_target_refs": 7638365,
+  "unique_matched_targets": 7638365,
+  "targets_claimed_by_gt2_queries": 0,
+  "s1_country_distribution_in_gt": {
+    "US": 1323633,
+    "India": 883188
+  },
+  "match_stats_by_s1_country": {
+    "India": {
+      "n_entities": 883188,
+      "singleton_pct": 5.5878,
+      "one_match_pct": 5.3746,
+      "multi_match_pct": 89.0376,
+      "mean_matches": 3.4645,
+      "mean_s2": 1.6764,
+      "mean_s3": 1.7882
+    },
+    "US": {
+      "n_entities": 1323633,
+      "singleton_pct": 5.5828,
+      "one_match_pct": 5.4161,
+      "multi_match_pct": 89.0011,
+      "mean_matches": 3.4591,
+      "mean_s2": 1.672,
+      "mean_s3": 1.7871
+    }
+  }
+}
