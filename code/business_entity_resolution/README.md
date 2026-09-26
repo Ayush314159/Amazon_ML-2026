@@ -1,7 +1,7 @@
 # Business Entity Resolution — pipeline code
 
-Status: validation framework + blocking (candidate generation) implemented. The
-matching model and submission writer are not built yet.
+Status: validation framework + blocking (candidate generation) implemented and frozen
+(see `analysis/blocking_analysis.md`). The matching model and submission writer are not built yet.
 
 All commands run from `code/business_entity_resolution/src`. Data is read from
 `<repo>/train`, `<repo>/test` (or `<repo>/dataset/{train,test}` if present).
@@ -20,8 +20,14 @@ python -m er.splits
 python -m er.index --split train --sources source2 source3
 
 # 4. blocking experiments on a validation sample (appends to experiments/*.csv)
-python -m er.blocking_experiments --n-queries 20000 --suite v2
+python -m er.blocking_experiments --n-queries 20000 --suite confirm
 python -m er.blocking_diagnostics --n-queries 20000 --top-k 20
+
+# 5. frozen blocking at full scale: checkpointed, resumable (re-run the same command after an interruption)
+python -m er.candidates --split train --fold 0                       # validation fold -> work/candidates/
+python -m er.candidates --evaluate --split train --fold 0            # recall / oracle F0.5 at 10..100 per source
+python -m er.candidates --split test --n-queries 20000 --seed 13     # after building test stores + indexes
+python -m er.candidates --describe --split test --n-queries 20000 --seed 13   # label-free per-country stats
 
 # unit tests (stdlib unittest)
 cd .. && python -m unittest discover -s tests
@@ -39,6 +45,7 @@ cd .. && python -m unittest discover -s tests
 | `splits.py` | validation folds + query sampling |
 | `index.py` | exact-key indexes and per-(source, country) hashed TF-IDF inverted indexes |
 | `blocking.py` | candidate retrieval over those indexes |
+| `candidates.py` | frozen blocking config (`fuse_nab_pab_r1000_k100`), chunked + resumable generation, evaluation, label-free description |
 | `blocking_experiments.py`, `blocking_diagnostics.py` | evaluation harness and miss analysis |
 | `resources.py` | runtime / peak-memory tracking |
 
