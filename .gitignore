@@ -15,3 +15,6 @@ __pycache__/
 .ipynb_checkpoints/
 .venv/
 venv/
+
+# Pipeline working artifacts (normalized stores, indexes, splits) - regenerable
+work/

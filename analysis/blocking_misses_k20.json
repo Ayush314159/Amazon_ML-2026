@@ -1,0 +1,506 @@
+{
+  "n_queries": 20000,
+  "true_pairs": 69276,
+  "missed_pairs": 2200,
+  "recall": 0.9682429701483919,
+  "top_k_per_source": 20,
+  "cap_df": 20000,
+  "seconds": 189.6,
+  "peak_rss_gb": 2.52,
+  "categories": {
+    "ranked_below_k": {
+      "pairs": 1924,
+      "share_of_misses": 0.8745,
+      "indic_target_name": 617,
+      "empty_target_addr": 376
+    },
+    "no_rare_feature": {
+      "pairs": 212,
+      "share_of_misses": 0.0964,
+      "indic_target_name": 140,
+      "empty_target_addr": 27
+    },
+    "lost_in_retrieval": {
+      "pairs": 64,
+      "share_of_misses": 0.0291,
+      "indic_target_name": 15,
+      "empty_target_addr": 13
+    }
+  },
+  "examples": {
+    "ranked_below_k": [
+      {
+        "query": [
+          "Apex Systems Pvt Ltd",
+          "302, 3Rd Fl, Sr. No. 48/13/3, Vijaylaxmi Prestige, Rahatani-Kalewadi Link Road, Rahatani, Pune, Maharashtra"
+        ],
+        "target": [
+          "एपेक्स सिस्टम्स प्रा. लि.",
+          "PUNE, 302, Maharashtra"
+        ],
+        "target_id": "S2-861080628",
+        "cosine": 0.0981,
+        "kth_score": 0.2093
+      },
+      {
+        "query": [
+          "Vijay Systems Pvt Ltd",
+          "B-306, Crestia, Casa Bella Gold, Shil Road, Kalyan, Thane, Maharashtra"
+        ],
+        "target": [
+          "विजय सिस्टम्स प्रा. लि.",
+          "Maharashtra, B-##306, THANE"
+        ],
+        "target_id": "S2-489455711",
+        "cosine": 0.1693,
+        "kth_score": 0.4535
+      },
+      {
+        "query": [
+          "NS Gourmet Private Limited",
+          "No: 397, Hmt Employees Co-Operative Society Layout Near Sri Kalika Durgaparameshwari Temple, Road, Vidyaranyapura, Bangalore, Karnataka"
+        ],
+        "target": [
+          "@nsgourmet",
+          "NO: 397, BANGALORE, VIDYARANYAPURA, Karnataka"
+        ],
+        "target_id": "S2-408577404",
+        "cosine": 0.2204,
+        "kth_score": 0.2256
+      },
+      {
+        "query": [
+          "Super Business Pvt Ltd",
+          "New Delhi, Delhi, Greater Kailash- Ii, 9, Commercial Complex, Masjid Moth"
+        ],
+        "target": [
+          "सुपर बिजनेस प्रा. लि.",
+          "9, GREATER KAILASH- II, DELHI GK, Delhi"
+        ],
+        "target_id": "S2-68971053",
+        "cosine": 0.2373,
+        "kth_score": 0.4217
+      },
+      {
+        "query": [
+          "Prime Engineering Pvt Ltd",
+          "804, B Wing, 8Th Floor, Hdil, Kaledonia, Sahar Road, Mumbai, Maharashtra"
+        ],
+        "target": [
+          "प्राइम इंजीनियरिंग प्रा. लि.",
+          "804, MUMBAI, महाराष्ट्र"
+        ],
+        "target_id": "S2-515032025",
+        "cosine": 0.1447,
+        "kth_score": 0.3578
+      },
+      {
+        "query": [
+          "Balaji Developers Private Limited",
+          "Flat No. E-96, Plot No.21 City Apartment, Vasundhra Enclave, New Delhi, East Delhi, Delhi"
+        ],
+        "target": [
+          "बालाजी डेवलपर्स प्राइवेट लिमिटेड",
+          "FLAT NO. E-96, EAST DELHI, NEW DELHI, दिल्ली"
+        ],
+        "target_id": "S2-862274343",
+        "cosine": 0.1946,
+        "kth_score": 0.2471
+      },
+      {
+        "query": [
+          "Jai Builders Limited",
+          "Flat No. 102, Palm No.2, Mayur Nagar Aarey Milk Colony, Goregaon (E), Mumbai, Mumbai City, Maharashtra"
+        ],
+        "target": [
+          "Jai Billers Limited",
+          ""
+        ],
+        "target_id": "S2-655751591",
+        "cosine": 0.1076,
+        "kth_score": 0.3299
+      },
+      {
+        "query": [
+          "Jai Builders Limited",
+          "Flat No. 102, Palm No.2, Mayur Nagar Aarey Milk Colony, Goregaon (E), Mumbai, Mumbai City, Maharashtra"
+        ],
+        "target": [
+          "जय बिल्डर्स लिमिटेड",
+          "FLAT NO. 102, MUMBAI, MUMBAI CITY, Maharashtra"
+        ],
+        "target_id": "S2-415911584",
+        "cosine": 0.1802,
+        "kth_score": 0.3299
+      },
+      {
+        "query": [
+          "Jai Builders Limited",
+          "Flat No. 102, Palm No.2, Mayur Nagar Aarey Milk Colony, Goregaon (E), Mumbai, Mumbai City, Maharashtra"
+        ],
+        "target": [
+          "जय बिल्डर्स लिमिटेड",
+          "102, MUMBAI, Maharashtra, MUMBAI CITY"
+        ],
+        "target_id": "S2-340615924",
+        "cosine": 0.1468,
+        "kth_score": 0.3299
+      },
+      {
+        "query": [
+          "Neelkanth Realty Ltd",
+          "109/111, Goregaon Pagrav Chs Ltd, 56 S V Road, Goregaon (W), Mumbai, Mumbai City, Maharashtra"
+        ],
+        "target": [
+          "Neelkanth Rblbty Ltd",
+          ""
+        ],
+        "target_id": "S2-820276751",
+        "cosine": 0.1733,
+        "kth_score": 0.2746
+      },
+      {
+        "query": [
+          "Dynamic Constructions Private Limited",
+          "Kota, Plot No. 15, Rajasthan, Mahaveer Nagar Ext., Kota"
+        ],
+        "target": [
+          "डायनामिक कंस्ट्रक्शंस प्राइवेट लिमिटेड",
+          "1-5, KOTA, Rajasthan"
+        ],
+        "target_id": "S2-255481924",
+        "cosine": 0.1646,
+        "kth_score": 0.3014
+      },
+      {
+        "query": [
+          "Green Logistics Private Limited",
+          "84, Moore Avenue Tollygunge, Kolkata, Howrah, West Bengal"
+        ],
+        "target": [
+          "গ্রীন লজিস্টিকস প্রাইভেট লিমিটেড",
+          "H.NO 914 84, KOLKATA, West Bengal"
+        ],
+        "target_id": "S2-77619115",
+        "cosine": 0.1296,
+        "kth_score": 0.2901
+      }
+    ],
+    "lost_in_retrieval": [
+      {
+        "query": [
+          "Krishna Projects Private Limited",
+          "Shop No.4 Plot No.17, Janta Market Nerul, Thane, Maharashtra"
+        ],
+        "target": [
+          "कृष्ण प्रोजेक्ट्स प्राइवेट लिमिटेड",
+          "4 PLOT NO.17, THANE, महाराष्ट्र"
+        ],
+        "target_id": "S2-853059739",
+        "cosine": 0.3044,
+        "kth_score": 0.2785
+      },
+      {
+        "query": [
+          "New Estate Pvt Ltd",
+          "No. 1089, Karnataka, 4Th Floor, 5Th Cross, 8Th Main, Bangalore North, Bangalore"
+        ],
+        "target": [
+          "newestate.com",
+          "NO. 108 , 4TH FLOOR, 5TH CROSS, 8TH MAIN, BANGALORE NORTH, ಕರ್ನಾಟಕ"
+        ],
+        "target_id": "S2-373839503",
+        "cosine": 0.3662,
+        "kth_score": 0.2678
+      },
+      {
+        "query": [
+          "New Estate Pvt Ltd",
+          "No. 1089, Karnataka, 4Th Floor, 5Th Cross, 8Th Main, Bangalore North, Bangalore"
+        ],
+        "target": [
+          "ನ್ಯೂ ಎಸ್ಟೇಟ್ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್",
+          "NO. 108, 4TH FLOOR, 5TH CROSS, 8TH MAIN, BANGALORE NORTH, BANGALORE, Karnataka"
+        ],
+        "target_id": "S2-360023070",
+        "cosine": 0.3968,
+        "kth_score": 0.2678
+      },
+      {
+        "query": [
+          "Lotus Shyam Finance Limited",
+          "Apartment No.605, Tower -1, The Palms, South City-1, New Colony, Gurgaon, Haryana"
+        ],
+        "target": [
+          "लोटस श्याम फाइनेंस लिमिटेड",
+          "APARTMENT NO.605, NEW COLONY, GURGAON, Haryana"
+        ],
+        "target_id": "S2-314739076",
+        "cosine": 0.2661,
+        "kth_score": 0.2655
+      },
+      {
+        "query": [
+          "White Global Private Limited",
+          "3/9, Rajkrishna Chatterjee Road Kasba, Kolkata, Howrah, West Bengal"
+        ],
+        "target": [
+          "হোয়াইট গ্লোবাল প্রাইভেট লিমিটেড",
+          "#3/9, KOLKATA, HOWRAH, West Bengal"
+        ],
+        "target_id": "S2-942546845",
+        "cosine": 0.2901,
+        "kth_score": 0.2439
+      },
+      {
+        "query": [
+          "Jain Food Private Limited",
+          "39A, Kali Temple Road, Kolkata, Kolkata, Howrah, West Bengal"
+        ],
+        "target": [
+          "জৈন ফুড প্রাইভেট লিমিটেড",
+          "NO 582 39A, KOLKATA, HOWRAH, West Bengal"
+        ],
+        "target_id": "S2-517833241",
+        "cosine": 0.3298,
+        "kth_score": 0.3198
+      },
+      {
+        "query": [
+          "Red Infotech Pvt Ltd",
+          "8 Naktola Road Ground Floor Flat No - Gc, Kolkata, Howrah, West Bengal"
+        ],
+        "target": [
+          "রেড ইনফোটেক প্রাইভেট লিমিটেড",
+          "8 NTKTOLA ROAD GROUND FLOOR FLAT NO - GC, KOLKATA, NAKTALA, West Bengal"
+        ],
+        "target_id": "S2-212376861",
+        "cosine": 0.2416,
+        "kth_score": 0.2293
+      },
+      {
+        "query": [
+          "Guru Healthcare",
+          "Shop No. 9, Uday Tower Vijayant Khand, Gomti Nagar, Lucknow, Uttar Pradesh"
+        ],
+        "target": [
+          "गुरु हेल्थकेयर",
+          "GOMTI NAGAR, Uttar Pradesh, LUCKNOW, SHOP NO. 9"
+        ],
+        "target_id": "S2-254252178",
+        "cosine": 0.3705,
+        "kth_score": 0.3386
+      },
+      {
+        "query": [
+          "Star Consultancy Private Limited",
+          "Sf-Office 2, Eyecon, Nr. Sagun Classic, Ahmadabad City, Ahmedabad, Gujarat"
+        ],
+        "target": [
+          "સ્ટાર કન્સલ્ટન્સી પ્રાઇવેટ લિમિટેડ",
+          "SF-OFFCIE ##2, AHMADABAD CITY, AHMEDABAD, Gujarat"
+        ],
+        "target_id": "S2-70741909",
+        "cosine": 0.2037,
+        "kth_score": 0.2022
+      },
+      {
+        "query": [
+          "Premier Consulting LLP",
+          "East Delhi, Delhi, East Delhi, First Floor, Anand Vihar, C-25"
+        ],
+        "target": [
+          "प्रीमियर कंसल्टिंग एलएलपी",
+          "PLOT 73 C-25, FIRST FLOOR, ANAND VIHAR, EAST DELHI, Delhi"
+        ],
+        "target_id": "S2-237088916",
+        "cosine": 0.4151,
+        "kth_score": 0.3398
+      },
+      {
+        "query": [
+          "Sun Foundation Limited",
+          "Shop No 9, Ground Floor, Sharda Apartment B, Thane, Maharashtra"
+        ],
+        "target": [
+          "सन फाउंडेशन लिमिटेड",
+          "MUMBAI, Maharashtra, GROUND FLOOR, SHARDA APARTMENT B, SHOP NO 9, THANE"
+        ],
+        "target_id": "S2-349349986",
+        "cosine": 0.5087,
+        "kth_score": 0.3261
+      },
+      {
+        "query": [
+          "Bounty & Co",
+          "Flat 1002, Sandeep Building, 10Th Road, Khar West, Mumbai, Maharashtra"
+        ],
+        "target": [
+          "Bocdnuty & Co",
+          "FLAT 1002, MUMBAI, महाराष्ट्र"
+        ],
+        "target_id": "S2-929133162",
+        "cosine": 0.2608,
+        "kth_score": 0.2528
+      }
+    ],
+    "no_rare_feature": [
+      {
+        "query": [
+          "City Constructions LLP",
+          "11, West Minster, Ns Mankikar Marg, Sion, Mumbai, Maharashtra"
+        ],
+        "target": [
+          "सिटी कंस्ट्रक्शंस एलएलपी",
+          "11, MUMBAI, Maharashtra"
+        ],
+        "target_id": "S2-828831208",
+        "cosine": 0.091,
+        "kth_score": 0.2726
+      },
+      {
+        "query": [
+          "Jay Projects Private Limited",
+          "2Nd Floor, Office No.2 Appasaheb Marathe Marg, Prabhadevi, Mumbai City, Mumbai, Maharashtra, Rajan House"
+        ],
+        "target": [
+          "जय प्रोजेक्ट्स प्राइवेट लिमिटेड",
+          "RAJRN HOUSE, MUMBAI, MUMBAI CITY, Maharashtra"
+        ],
+        "target_id": "S2-900074505",
+        "cosine": 0.1128,
+        "kth_score": 0.4756
+      },
+      {
+        "query": [
+          "Hotel Construction Private Limited",
+          "Thane, 4Th Floor, Hiranandani Bus, Iness Park, Zenia Building, Thane, Maharashtra"
+        ],
+        "target": [
+          "होटल कंस्ट्रक्शन प्राइवेट लिमिटेड",
+          "4TH FLOOR, GREATER BOMBAY, THANE, Maharashtra"
+        ],
+        "target_id": "S2-649774894",
+        "cosine": 0.1662,
+        "kth_score": 0.3936
+      },
+      {
+        "query": [
+          "Innovative Global Private Limited",
+          "H. No. 14, Old No-17, Office No-302 Third Floor, Veer Savarkar Block Shakarp, Ur, Delhi, East Delhi, Delhi"
+        ],
+        "target": [
+          "इनोवेटिव ग्लोबल प्राइवेट लिमिटेड",
+          "H.NO 14, EAST DELHI, दिल्ली"
+        ],
+        "target_id": "S2-671095043",
+        "cosine": 0.1088,
+        "kth_score": 0.2775
+      },
+      {
+        "query": [
+          "Swastik Management Limited",
+          "B-601, Saraswati Appts., I P Extn Patpar Ganj, Delhi, East Delhi, Delhi"
+        ],
+        "target": [
+          "स्वस्तिक मैनेजमेंट लिमिटेड",
+          "B-60, NEW DELHI, EAST DELHI, Delhi"
+        ],
+        "target_id": "S2-649142072",
+        "cosine": 0.0845,
+        "kth_score": 0.3557
+      },
+      {
+        "query": [
+          "Innovative Systems Private Limited",
+          "#1, Gunashankarappa Layout, Oil Mill Road, Bangalore, Karnataka"
+        ],
+        "target": [
+          "ಇನೋವೇಟಿವ್ ಸಿಸ್ಟಮ್ಸ್ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್",
+          "DOOR NO 1, BENGALURU HQ REGION, BANGALORE, Karnataka"
+        ],
+        "target_id": "S2-928472843",
+        "cosine": 0.0651,
+        "kth_score": 0.241
+      },
+      {
+        "query": [
+          "Creative Technologies",
+          "Plot No 1, Shop No 191, Sector 20, Vashi, Thane, Maharashtra"
+        ],
+        "target": [
+          "क्रिएटिव टेक्नोलॉजीज",
+          "THANE, PLOT NO 1, THANE, महाराष्ट्र"
+        ],
+        "target_id": "S2-171760340",
+        "cosine": 0.113,
+        "kth_score": 0.2938
+      },
+      {
+        "query": [
+          "Southern Projects Private Limited",
+          "22, Rupchand Roy Street 1St Floor, Kolkata, Kolkata, Howrah, West Bengal"
+        ],
+        "target": [
+          "সাউদার্ন প্রজেক্টস প্রাইভেট লিমিটেড",
+          "##22, HOWRAH, KOLKATA, West Bengal"
+        ],
+        "target_id": "S2-4817260",
+        "cosine": 0.1835,
+        "kth_score": 0.3022
+      },
+      {
+        "query": [
+          "My Foods Private Limited",
+          "West Delhi, Cabin 3, Basement, Kirti Nagar, E-8, New Delhi, Delhi"
+        ],
+        "target": [
+          "माय फूड्स प्राइवेट लिमिटेड",
+          "WEST DELHI, NEW DELHI, Delhi, E-8"
+        ],
+        "target_id": "S2-231435568",
+        "cosine": 0.2013,
+        "kth_score": 0.3672
+      },
+      {
+        "query": [
+          "Urban Super Finance Private Limited",
+          "Old No, 185 New No, 243 Anna Salai, Chennai, Tamil Nadu"
+        ],
+        "target": [
+          "அர்பன் சூப்பர் ஃபைனான்ஸ் பிரைவேட் லிமிடெட்",
+          "OLD NO, CHENNAI, Tamil Nadu"
+        ],
+        "target_id": "S2-192721702",
+        "cosine": 0.165,
+        "kth_score": 0.273
+      },
+      {
+        "query": [
+          "Urban Super Finance Private Limited",
+          "Old No, 185 New No, 243 Anna Salai, Chennai, Tamil Nadu"
+        ],
+        "target": [
+          "அர்பன் சூப்பர் ஃபைனான்ஸ் பிரைவேட் லிமிடெட்",
+          "OLD NO, CHENNAI, Tamil Nadu"
+        ],
+        "target_id": "S2-513194409",
+        "cosine": 0.165,
+        "kth_score": 0.273
+      },
+      {
+        "query": [
+          "Great Trading",
+          "Flat1003, Bldg No11, Ostwal Orchid, Beverly Park Road, Mira Roadeast, Nrprathamesh Htg, Thane, Maharashtra"
+        ],
+        "target": [
+          "ग्रेट ट्रेडिंग",
+          "FLAT100, THANE, महाराष्ट्र"
+        ],
+        "target_id": "S2-953941438",
+        "cosine": 0.0391,
+        "kth_score": 0.2035
+      }
+    ]
+  }
+}
