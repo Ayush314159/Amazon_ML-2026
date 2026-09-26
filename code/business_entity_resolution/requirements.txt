@@ -1,0 +1,7 @@
+# Python 3.13.7 (CPU only). Blocking/validation stage dependencies.
+numpy==2.2.2
+pandas==2.2.3
+pyarrow==19.0.1
+scipy==1.15.2
+scikit-learn==1.6.1
+psutil==6.1.1
