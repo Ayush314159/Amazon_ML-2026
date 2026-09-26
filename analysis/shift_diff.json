@@ -1,0 +1,353 @@
+{
+  "source1": {
+    "train_rows": 2206821,
+    "test_rows": 1732544,
+    "row_count_ratio_test_over_train": 0.7851,
+    "train_country_distribution": {
+      "US": 1323633,
+      "India": 883188
+    },
+    "test_country_distribution": {
+      "India": 809986,
+      "US": 663106,
+      "France": 259452
+    },
+    "name_len_mean_train": 24.034,
+    "name_len_mean_test": 23.836,
+    "addr_len_mean_train": 52.066,
+    "addr_len_mean_test": 57.213,
+    "scalar_shift_pct_points": {
+      "name_non_ascii_pct": 2.354,
+      "name_devanagari_pct": 0.0,
+      "name_tamil_pct": 0.0,
+      "name_kannada_pct": 0.0,
+      "name_accented_latin_pct": 2.354,
+      "name_uppercase_pct": 0.0,
+      "name_titlecase_pct": -4.141,
+      "name_contains_digit_pct": -0.447,
+      "name_contains_url_pct": 0.0,
+      "name_leading_junk_pct": -0.022,
+      "addr_empty_pct": 0.0,
+      "addr_comma_count_mean": 0.153,
+      "addr_has_po_box_pct": 0.0,
+      "addr_has_unit_pct": -1.637,
+      "addr_has_us_zip_pct": -2.28,
+      "addr_has_in_pin_pct": -0.027,
+      "addr_has_landmark_pct": 0.738,
+      "addr_non_ascii_pct": 4.235,
+      "addr_accented_latin_pct": 4.17
+    },
+    "legal_suffix_shift": {
+      "llc": {
+        "train_pct": 16.1198,
+        "test_pct": 10.295
+      },
+      "inc": {
+        "train_pct": 10.7987,
+        "test_pct": 6.88
+      },
+      "incorporated": {
+        "train_pct": 0.0004,
+        "test_pct": 0.0002
+      },
+      "corp": {
+        "train_pct": 1.5741,
+        "test_pct": 1.1697
+      },
+      "corporation": {
+        "train_pct": 0.6513,
+        "test_pct": 0.6034
+      },
+      "ltd": {
+        "train_pct": 6.7336,
+        "test_pct": 7.7715
+      },
+      "limited": {
+        "train_pct": 23.6693,
+        "test_pct": 27.6278
+      },
+      "pvt": {
+        "train_pct": 5.5039,
+        "test_pct": 6.3986
+      },
+      "private limited": {
+        "train_pct": 19.5699,
+        "test_pct": 22.8698
+      },
+      "llp": {
+        "train_pct": 1.8001,
+        "test_pct": 2.0801
+      },
+      "co": {
+        "train_pct": 1.2481,
+        "test_pct": 1.2657
+      },
+      "company": {
+        "train_pct": 0.6286,
+        "test_pct": 0.5585
+      },
+      "enterprises": {
+        "train_pct": 0.8109,
+        "test_pct": 0.8136
+      },
+      "sarl": {
+        "train_pct": 0.0,
+        "test_pct": 4.2415
+      },
+      "sas": {
+        "train_pct": 0.005,
+        "test_pct": 3.0241
+      },
+      "s.a.s": {
+        "train_pct": 0.0,
+        "test_pct": 0.0
+      },
+      "eurl": {
+        "train_pct": 0.0,
+        "test_pct": 0.9801
+      },
+      "sci": {
+        "train_pct": 0.0005,
+        "test_pct": 0.4835
+      },
+      "sa": {
+        "train_pct": 0.0082,
+        "test_pct": 0.7428
+      }
+    }
+  },
+  "source2": {
+    "train_rows": 5034616,
+    "test_rows": 4887273,
+    "row_count_ratio_test_over_train": 0.9707,
+    "train_country_distribution": {
+      "US": 3016817,
+      "India": 2017799
+    },
+    "test_country_distribution": {
+      "India": 2312565,
+      "US": 1871330,
+      "France": 703378
+    },
+    "name_len_mean_train": 25.104,
+    "name_len_mean_test": 25.704,
+    "addr_len_mean_train": 46.226,
+    "addr_len_mean_test": 50.413,
+    "scalar_shift_pct_points": {
+      "name_non_ascii_pct": 3.804,
+      "name_devanagari_pct": 0.974,
+      "name_tamil_pct": 0.126,
+      "name_kannada_pct": 0.159,
+      "name_accented_latin_pct": 3.155,
+      "name_uppercase_pct": -1.407,
+      "name_titlecase_pct": -2.4,
+      "name_contains_digit_pct": -1.19,
+      "name_contains_url_pct": -0.805,
+      "name_leading_junk_pct": -0.36,
+      "addr_empty_pct": -0.708,
+      "addr_comma_count_mean": 0.101,
+      "addr_has_po_box_pct": -0.351,
+      "addr_has_unit_pct": 1.719,
+      "addr_has_us_zip_pct": -1.976,
+      "addr_has_in_pin_pct": -0.283,
+      "addr_has_landmark_pct": 0.698,
+      "addr_non_ascii_pct": 5.243,
+      "addr_accented_latin_pct": 2.612
+    },
+    "legal_suffix_shift": {
+      "llc": {
+        "train_pct": 10.4934,
+        "test_pct": 6.5098
+      },
+      "inc": {
+        "train_pct": 7.9495,
+        "test_pct": 5.1002
+      },
+      "incorporated": {
+        "train_pct": 0.5202,
+        "test_pct": 0.3007
+      },
+      "corp": {
+        "train_pct": 2.816,
+        "test_pct": 2.3694
+      },
+      "corporation": {
+        "train_pct": 1.2438,
+        "test_pct": 0.991
+      },
+      "ltd": {
+        "train_pct": 7.9145,
+        "test_pct": 8.7119
+      },
+      "limited": {
+        "train_pct": 10.5032,
+        "test_pct": 12.9276
+      },
+      "pvt": {
+        "train_pct": 3.7594,
+        "test_pct": 4.4499
+      },
+      "private limited": {
+        "train_pct": 4.0586,
+        "test_pct": 4.9713
+      },
+      "llp": {
+        "train_pct": 1.2833,
+        "test_pct": 1.7208
+      },
+      "co": {
+        "train_pct": 2.772,
+        "test_pct": 2.5987
+      },
+      "company": {
+        "train_pct": 0.6265,
+        "test_pct": 0.6039
+      },
+      "enterprises": {
+        "train_pct": 0.98,
+        "test_pct": 1.3529
+      },
+      "sarl": {
+        "train_pct": 0.0,
+        "test_pct": 2.8791
+      },
+      "sas": {
+        "train_pct": 0.0051,
+        "test_pct": 2.0294
+      },
+      "s.a.s": {
+        "train_pct": 0.0,
+        "test_pct": 0.0
+      },
+      "eurl": {
+        "train_pct": 0.0,
+        "test_pct": 0.8496
+      },
+      "sci": {
+        "train_pct": 0.0005,
+        "test_pct": 0.5611
+      },
+      "sa": {
+        "train_pct": 0.0096,
+        "test_pct": 0.7116
+      }
+    }
+  },
+  "source3": {
+    "train_rows": 5285603,
+    "test_rows": 5082316,
+    "row_count_ratio_test_over_train": 0.9615,
+    "train_country_distribution": {
+      "US": 3170056,
+      "India": 2115547
+    },
+    "test_country_distribution": {
+      "India": 2405000,
+      "US": 1945701,
+      "France": 731615
+    },
+    "name_len_mean_train": 25.202,
+    "name_len_mean_test": 25.655,
+    "addr_len_mean_train": 46.714,
+    "addr_len_mean_test": 48.74,
+    "scalar_shift_pct_points": {
+      "name_non_ascii_pct": 3.032,
+      "name_devanagari_pct": 0.574,
+      "name_tamil_pct": 0.075,
+      "name_kannada_pct": 0.092,
+      "name_accented_latin_pct": 3.025,
+      "name_uppercase_pct": 0.244,
+      "name_titlecase_pct": -2.545,
+      "name_contains_digit_pct": -1.14,
+      "name_contains_url_pct": -0.764,
+      "name_leading_junk_pct": -0.336,
+      "addr_empty_pct": -0.65,
+      "addr_comma_count_mean": 0.065,
+      "addr_has_po_box_pct": -0.331,
+      "addr_has_unit_pct": -0.396,
+      "addr_has_us_zip_pct": -1.989,
+      "addr_has_in_pin_pct": -0.27,
+      "addr_has_landmark_pct": 0.503,
+      "addr_non_ascii_pct": 5.331,
+      "addr_accented_latin_pct": 2.679
+    },
+    "legal_suffix_shift": {
+      "llc": {
+        "train_pct": 10.8098,
+        "test_pct": 6.7174
+      },
+      "inc": {
+        "train_pct": 7.9445,
+        "test_pct": 5.1103
+      },
+      "incorporated": {
+        "train_pct": 0.4119,
+        "test_pct": 0.2385
+      },
+      "corp": {
+        "train_pct": 2.6532,
+        "test_pct": 2.2418
+      },
+      "corporation": {
+        "train_pct": 1.0992,
+        "test_pct": 0.8913
+      },
+      "ltd": {
+        "train_pct": 8.0933,
+        "test_pct": 9.0647
+      },
+      "limited": {
+        "train_pct": 12.7418,
+        "test_pct": 15.6837
+      },
+      "pvt": {
+        "train_pct": 4.1689,
+        "test_pct": 4.96
+      },
+      "private limited": {
+        "train_pct": 5.3681,
+        "test_pct": 6.5399
+      },
+      "llp": {
+        "train_pct": 1.4604,
+        "test_pct": 1.9628
+      },
+      "co": {
+        "train_pct": 2.7213,
+        "test_pct": 2.5862
+      },
+      "company": {
+        "train_pct": 0.6029,
+        "test_pct": 0.5847
+      },
+      "enterprises": {
+        "train_pct": 1.0757,
+        "test_pct": 1.4705
+      },
+      "sarl": {
+        "train_pct": 0.0,
+        "test_pct": 2.8429
+      },
+      "sas": {
+        "train_pct": 0.0047,
+        "test_pct": 2.0086
+      },
+      "s.a.s": {
+        "train_pct": 0.0,
+        "test_pct": 0.0
+      },
+      "eurl": {
+        "train_pct": 0.0,
+        "test_pct": 0.8322
+      },
+      "sci": {
+        "train_pct": 0.0006,
+        "test_pct": 0.5497
+      },
+      "sa": {
+        "train_pct": 0.0112,
+        "test_pct": 0.6988
+      }
+    }
+  }
+}

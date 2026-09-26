@@ -1,0 +1,230 @@
+[
+  {
+    "source": "train_source2",
+    "norm_name": "007 silverbox",
+    "member_ids": [
+      "S2-855791298",
+      "S2-595061590",
+      "S2-844008377",
+      "S2-614485637",
+      "S2-535943605"
+    ],
+    "distinct_true_owners": [
+      "S1-179850201",
+      "S1-2831596",
+      "S1-695107161",
+      "S1-918623599"
+    ]
+  },
+  {
+    "source": "train_source2",
+    "norm_name": "1 800 got",
+    "member_ids": [
+      "S2-984825785",
+      "S2-366969223",
+      "S2-294426720",
+      "S2-709518419",
+      "S2-575497586",
+      "S2-464324152",
+      "S2-629780367",
+      "S2-470260491",
+      "S2-69276540"
+    ],
+    "distinct_true_owners": [
+      "S1-401593803",
+      "S1-273759764",
+      "S1-452328758",
+      "S1-479243328",
+      "S1-831430998",
+      "S1-549101368",
+      "S1-305645172",
+      "S1-930747936"
+    ]
+  },
+  {
+    "source": "train_source2",
+    "norm_name": "2556 lexington road",
+    "member_ids": [
+      "S2-797729841",
+      "S2-987614974",
+      "S2-981409235"
+    ],
+    "distinct_true_owners": [
+      "S1-685378736",
+      "S1-120267252"
+    ]
+  },
+  {
+    "source": "train_source2",
+    "norm_name": "2itcure com",
+    "member_ids": [
+      "S2-637297645",
+      "S2-156204355"
+    ],
+    "distinct_true_owners": [
+      "S1-838982677",
+      "S1-569772339"
+    ]
+  },
+  {
+    "source": "train_source2",
+    "norm_name": "4 point l l c",
+    "member_ids": [
+      "S2-303702312",
+      "S2-498016072"
+    ],
+    "distinct_true_owners": [
+      "S1-299783718",
+      "S1-686069213"
+    ]
+  },
+  {
+    "source": "train_source2",
+    "norm_name": "5 3 biotechnology inc",
+    "member_ids": [
+      "S2-123077775",
+      "S2-975985324"
+    ],
+    "distinct_true_owners": [
+      "S1-340120552",
+      "S1-323827479"
+    ]
+  },
+  {
+    "source": "train_source2",
+    "norm_name": "5ynfaye",
+    "member_ids": [
+      "S2-855299686",
+      "S2-18131329",
+      "S2-272005359",
+      "S2-932717905"
+    ],
+    "distinct_true_owners": [
+      "S1-870969360",
+      "S1-780168738",
+      "S1-565244446",
+      "S1-521673702"
+    ]
+  },
+  {
+    "source": "train_source2",
+    "norm_name": "7 point l l c",
+    "member_ids": [
+      "S2-355838786",
+      "S2-74024764"
+    ],
+    "distinct_true_owners": [
+      "S1-85768654",
+      "S1-161205301"
+    ]
+  },
+  {
+    "source": "train_source3(sampled)",
+    "norm_name": "172 lake blvd owners corp inc",
+    "member_ids": [
+      "S3-851853039",
+      "S3-57021784"
+    ],
+    "distinct_true_owners": [
+      "S1-399349203",
+      "S1-8205709"
+    ]
+  },
+  {
+    "source": "train_source3(sampled)",
+    "norm_name": "2 point",
+    "member_ids": [
+      "S3-285367611",
+      "S3-850311737",
+      "S3-181023487"
+    ],
+    "distinct_true_owners": [
+      "S1-544255222",
+      "S1-406969742",
+      "S1-11039452"
+    ]
+  },
+  {
+    "source": "train_source3(sampled)",
+    "norm_name": "2055 third boulevard properties",
+    "member_ids": [
+      "S3-638929440",
+      "S3-423724752"
+    ],
+    "distinct_true_owners": [
+      "S1-591394692",
+      "S1-294334519"
+    ]
+  },
+  {
+    "source": "train_source3(sampled)",
+    "norm_name": "24hrlocksmith com",
+    "member_ids": [
+      "S3-494458711",
+      "S3-829825495"
+    ],
+    "distinct_true_owners": [
+      "S1-822258919",
+      "S1-395779556"
+    ]
+  },
+  {
+    "source": "train_source3(sampled)",
+    "norm_name": "6 point",
+    "member_ids": [
+      "S3-367463819",
+      "S3-823361955",
+      "S3-863976182",
+      "S3-360485852",
+      "S3-515854749",
+      "S3-574479598"
+    ],
+    "distinct_true_owners": [
+      "S1-586496931",
+      "S1-426936029",
+      "S1-569912180",
+      "S1-128879372",
+      "S1-718045784"
+    ]
+  },
+  {
+    "source": "train_source3(sampled)",
+    "norm_name": "6old builders private limited",
+    "member_ids": [
+      "S3-182265997",
+      "S3-765082195"
+    ],
+    "distinct_true_owners": [
+      "S1-112613235",
+      "S1-156989966"
+    ]
+  },
+  {
+    "source": "train_source3(sampled)",
+    "norm_name": "9 sons",
+    "member_ids": [
+      "S3-506533108",
+      "S3-592466430"
+    ],
+    "distinct_true_owners": [
+      "S1-918815435",
+      "S1-281350050"
+    ]
+  },
+  {
+    "source": "train_source3(sampled)",
+    "norm_name": "a cure 6 all llc",
+    "member_ids": [
+      "S3-608186000",
+      "S3-357923813",
+      "S3-178826697",
+      "S3-476592536"
+    ],
+    "distinct_true_owners": [
+      "S1-854362175",
+      "S1-49159723",
+      "S1-895115365",
+      "S1-1541395"
+    ]
+  }
+]

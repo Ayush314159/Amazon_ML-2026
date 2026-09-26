@@ -1,0 +1,560 @@
+{
+  "likely_typo": [
+    {
+      "s1_id": "S1-818149988",
+      "s1_name": "Vadyne Inc",
+      "s1_addr": "Greensboro, 1604 Washington Street, NC",
+      "s1_country": "US",
+      "target_id": "S3-965578558",
+      "target_name": "Vagdyae Inc",
+      "target_addr": "01604 Washington Street, PMB 841, Greensboro, North Carolina",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-136081707",
+      "s1_name": "Green Global Apogee",
+      "s1_addr": "60 Taft Brook Road, Dover, VT",
+      "s1_country": "US",
+      "target_id": "S3-494852042",
+      "target_name": "Green  Global Apogee Co",
+      "target_addr": "60 Taft Brook Road, Dover, Vermont",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-919245976",
+      "s1_name": "Ardath Martin Freedom Inc",
+      "s1_addr": "2293 White Pine Point Court, Pine River, MN",
+      "s1_country": "US",
+      "target_id": "S3-825968276",
+      "target_name": "Ardath Martin Freedom",
+      "target_addr": "##2293 White Pine Point Ct, Pine River, Minnesota",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-745362992",
+      "s1_name": "Stanley Point LLC",
+      "s1_addr": "1016 Twin Pines Drive, Ida Grove, IA",
+      "s1_country": "US",
+      "target_id": "S2-253989982",
+      "target_name": "Stanley Point",
+      "target_addr": "1016 TWIN PINES DRIVE, IDA GORVE, IA",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-745362992",
+      "s1_name": "Stanley Point LLC",
+      "s1_addr": "1016 Twin Pines Drive, Ida Grove, IA",
+      "s1_country": "US",
+      "target_id": "S2-253261515",
+      "target_name": "stanleypoint.com",
+      "target_addr": "1016 TWIN PINES DR, IDA GORVE, IA",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-363999259",
+      "s1_name": "Deeta Smile Public Limited",
+      "s1_addr": "C/O-Mursalim Sk, Vill-Kaigoria, Po-Diha Ps- Nalhati, Nalhati, Birbhum, West Bengal",
+      "s1_country": "India",
+      "target_id": "S3-988753194",
+      "target_name": "Deeta  Smmiel Public Limited",
+      "target_addr": "Co/-mursalim Sk, Vill-kaigoria, Po-diha Ps- Nalhati, Birbhum, Nalhati, WB",
+      "target_country": "India"
+    }
+  ],
+  "legal_suffix_abbreviation": [
+    {
+      "s1_id": "S1-136081707",
+      "s1_name": "Green Global Apogee",
+      "s1_addr": "60 Taft Brook Road, Dover, VT",
+      "s1_country": "US",
+      "target_id": "S3-494852042",
+      "target_name": "Green  Global Apogee Co",
+      "target_addr": "60 Taft Brook Road, Dover, Vermont",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-680347141",
+      "s1_name": "Sorrells & Hanson LLC",
+      "s1_addr": "24618 Shellbrook Drive, Huffman, TX",
+      "s1_country": "US",
+      "target_id": "S3-315706239",
+      "target_name": "LLC SORRELLS & HANSON",
+      "target_addr": "24618 Shelbrook Dr, Huffman, Texas",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-919245976",
+      "s1_name": "Ardath Martin Freedom Inc",
+      "s1_addr": "2293 White Pine Point Court, Pine River, MN",
+      "s1_country": "US",
+      "target_id": "S3-825968276",
+      "target_name": "Ardath Martin Freedom",
+      "target_addr": "##2293 White Pine Point Ct, Pine River, Minnesota",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-745362992",
+      "s1_name": "Stanley Point LLC",
+      "s1_addr": "1016 Twin Pines Drive, Ida Grove, IA",
+      "s1_country": "US",
+      "target_id": "S2-253989982",
+      "target_name": "Stanley Point",
+      "target_addr": "1016 TWIN PINES DRIVE, IDA GORVE, IA",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-745362992",
+      "s1_name": "Stanley Point LLC",
+      "s1_addr": "1016 Twin Pines Drive, Ida Grove, IA",
+      "s1_country": "US",
+      "target_id": "S3-149014041",
+      "target_name": "Llc Stanley Point",
+      "target_addr": "Iowa, 1016 Twn Pines Dr, Ida Grove",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-363999259",
+      "s1_name": "Deeta Smile Public Limited",
+      "s1_addr": "C/O-Mursalim Sk, Vill-Kaigoria, Po-Diha Ps- Nalhati, Nalhati, Birbhum, West Bengal",
+      "s1_country": "India",
+      "target_id": "S3-919915381",
+      "target_name": "Deeta Smile Public",
+      "target_addr": "C/o-mursalim Sk, Nalhati, পশ্চিমবঙ্গ",
+      "target_country": "India"
+    }
+  ],
+  "normalized_exact_name": [
+    {
+      "s1_id": "S1-136081707",
+      "s1_name": "Green Global Apogee",
+      "s1_addr": "60 Taft Brook Road, Dover, VT",
+      "s1_country": "US",
+      "target_id": "S3-198554090",
+      "target_name": "Green  Global Apogee",
+      "target_addr": "60 Taft Brook Road, Dover, Vermont",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-935335906",
+      "s1_name": "Ortega Clear End LLC",
+      "s1_addr": "20630 Castle Bend Drive, Katy, TX",
+      "s1_country": "US",
+      "target_id": "S2-577689878",
+      "target_name": "ORTEGA CLEAR END LLC",
+      "target_addr": "#20630 CASTLE BEND DR, KATY, TX",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-919245976",
+      "s1_name": "Ardath Martin Freedom Inc",
+      "s1_addr": "2293 White Pine Point Court, Pine River, MN",
+      "s1_country": "US",
+      "target_id": "S2-754120612",
+      "target_name": "ARDATH MARTIN FRÉEDOM INC",
+      "target_addr": "2293  WHITE PINE POINT CT, PINE RIVER, MN",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-919245976",
+      "s1_name": "Ardath Martin Freedom Inc",
+      "s1_addr": "2293 White Pine Point Court, Pine River, MN",
+      "s1_country": "US",
+      "target_id": "S2-472729944",
+      "target_name": "Ardath Martin Freedom Inc.",
+      "target_addr": "2293  WHITE PINE POINT CT, PINE RIVER, MN",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-919245976",
+      "s1_name": "Ardath Martin Freedom Inc",
+      "s1_addr": "2293 White Pine Point Court, Pine River, MN",
+      "s1_country": "US",
+      "target_id": "S3-274148494",
+      "target_name": "Ardath Martin Freedom Inc.",
+      "target_addr": "##2293 White Pine Point Ct, Pine River, Minnesota",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-745362992",
+      "s1_name": "Stanley Point LLC",
+      "s1_addr": "1016 Twin Pines Drive, Ida Grove, IA",
+      "s1_country": "US",
+      "target_id": "S3-84438846",
+      "target_name": "Stanley Point Llc",
+      "target_addr": "1016 Twin Pines Drive, Ida Grove, Iowa",
+      "target_country": "US"
+    }
+  ],
+  "punctuation_change": [
+    {
+      "s1_id": "S1-136081707",
+      "s1_name": "Green Global Apogee",
+      "s1_addr": "60 Taft Brook Road, Dover, VT",
+      "s1_country": "US",
+      "target_id": "S3-198554090",
+      "target_name": "Green  Global Apogee",
+      "target_addr": "60 Taft Brook Road, Dover, Vermont",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-919245976",
+      "s1_name": "Ardath Martin Freedom Inc",
+      "s1_addr": "2293 White Pine Point Court, Pine River, MN",
+      "s1_country": "US",
+      "target_id": "S2-754120612",
+      "target_name": "ARDATH MARTIN FRÉEDOM INC",
+      "target_addr": "2293  WHITE PINE POINT CT, PINE RIVER, MN",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-919245976",
+      "s1_name": "Ardath Martin Freedom Inc",
+      "s1_addr": "2293 White Pine Point Court, Pine River, MN",
+      "s1_country": "US",
+      "target_id": "S2-472729944",
+      "target_name": "Ardath Martin Freedom Inc.",
+      "target_addr": "2293  WHITE PINE POINT CT, PINE RIVER, MN",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-919245976",
+      "s1_name": "Ardath Martin Freedom Inc",
+      "s1_addr": "2293 White Pine Point Court, Pine River, MN",
+      "s1_country": "US",
+      "target_id": "S3-274148494",
+      "target_name": "Ardath Martin Freedom Inc.",
+      "target_addr": "##2293 White Pine Point Ct, Pine River, Minnesota",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-745362992",
+      "s1_name": "Stanley Point LLC",
+      "s1_addr": "1016 Twin Pines Drive, Ida Grove, IA",
+      "s1_country": "US",
+      "target_id": "S3-964920674",
+      "target_name": "Stanley Point  LLC",
+      "target_addr": "1016 Twin Penes Drive, Ida Grove, Iowa",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-363999259",
+      "s1_name": "Deeta Smile Public Limited",
+      "s1_addr": "C/O-Mursalim Sk, Vill-Kaigoria, Po-Diha Ps- Nalhati, Nalhati, Birbhum, West Bengal",
+      "s1_country": "India",
+      "target_id": "S3-779762275",
+      "target_name": "Deeta Smile  Public Limited",
+      "target_addr": "C/o-mursalim Sk, Nalhati, Birbhum, WB",
+      "target_country": "India"
+    }
+  ],
+  "token_reordering": [
+    {
+      "s1_id": "S1-680347141",
+      "s1_name": "Sorrells & Hanson LLC",
+      "s1_addr": "24618 Shellbrook Drive, Huffman, TX",
+      "s1_country": "US",
+      "target_id": "S3-315706239",
+      "target_name": "LLC SORRELLS & HANSON",
+      "target_addr": "24618 Shelbrook Dr, Huffman, Texas",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-503320165",
+      "s1_name": "PUN Velos LLC",
+      "s1_addr": "1822 40th Street, Rock Island, IL",
+      "s1_country": "US",
+      "target_id": "S2-115299522",
+      "target_name": "PUN LLC Velos",
+      "target_addr": "1822 40RD STREET, ROCK ISLAND, IL",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-153830318",
+      "s1_name": "Noreen's Piedmont Hair Studio",
+      "s1_addr": "240 Autumn Ridge Circle, Unit D1-D4, Spring City, TN",
+      "s1_country": "US",
+      "target_id": "S2-293521491",
+      "target_name": "NOREEN'S STUDIO HAIR PIEDMONT",
+      "target_addr": "SPRING CITY, AUTUMN RIDGE CIRCLE, TN",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-745362992",
+      "s1_name": "Stanley Point LLC",
+      "s1_addr": "1016 Twin Pines Drive, Ida Grove, IA",
+      "s1_country": "US",
+      "target_id": "S3-149014041",
+      "target_name": "Llc Stanley Point",
+      "target_addr": "Iowa, 1016 Twn Pines Dr, Ida Grove",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-902181206",
+      "s1_name": "Services Samarth Systems Private Limited",
+      "s1_addr": "Krishna Bhuvan, Block No. 3, 67, Nehru Road, Vile Parle (East), Mumbai, Mumbai City, Maharashtra",
+      "s1_country": "India",
+      "target_id": "S2-591125955",
+      "target_name": "PRIVATE SERVICES SAMARTH SYSTEMS LIMITED",
+      "target_addr": "Maharashtra, MUMBAI CITY, BLOCK NO. 3, 67, NEHRU ROAD, VILE PARLE (EAST), KRISHNA BHUVAN, MUMBAI",
+      "target_country": "India"
+    },
+    {
+      "s1_id": "S1-477299231",
+      "s1_name": "Ileana Diaz Fitness LLC",
+      "s1_addr": "4820 Frederick Drive, Fort Harrison, MT",
+      "s1_country": "US",
+      "target_id": "S3-37296208",
+      "target_name": "Diaz, Ileana Fitness Llc",
+      "target_addr": "4820 Frederick Drive, Fort Harrison, Montana",
+      "target_country": "US"
+    }
+  ],
+  "address_variation_name_close": [
+    {
+      "s1_id": "S1-680347141",
+      "s1_name": "Sorrells & Hanson LLC",
+      "s1_addr": "24618 Shellbrook Drive, Huffman, TX",
+      "s1_country": "US",
+      "target_id": "S3-315706239",
+      "target_name": "LLC SORRELLS & HANSON",
+      "target_addr": "24618 Shelbrook Dr, Huffman, Texas",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-745362992",
+      "s1_name": "Stanley Point LLC",
+      "s1_addr": "1016 Twin Pines Drive, Ida Grove, IA",
+      "s1_country": "US",
+      "target_id": "S3-149014041",
+      "target_name": "Llc Stanley Point",
+      "target_addr": "Iowa, 1016 Twn Pines Dr, Ida Grove",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-363999259",
+      "s1_name": "Deeta Smile Public Limited",
+      "s1_addr": "C/O-Mursalim Sk, Vill-Kaigoria, Po-Diha Ps- Nalhati, Nalhati, Birbhum, West Bengal",
+      "s1_country": "India",
+      "target_id": "S3-779762275",
+      "target_name": "Deeta Smile  Public Limited",
+      "target_addr": "C/o-mursalim Sk, Nalhati, Birbhum, WB",
+      "target_country": "India"
+    },
+    {
+      "s1_id": "S1-363999259",
+      "s1_name": "Deeta Smile Public Limited",
+      "s1_addr": "C/O-Mursalim Sk, Vill-Kaigoria, Po-Diha Ps- Nalhati, Nalhati, Birbhum, West Bengal",
+      "s1_country": "India",
+      "target_id": "S3-919915381",
+      "target_name": "Deeta Smile Public",
+      "target_addr": "C/o-mursalim Sk, Nalhati, পশ্চিমবঙ্গ",
+      "target_country": "India"
+    },
+    {
+      "s1_id": "S1-681598856",
+      "s1_name": "Prova Capital",
+      "s1_addr": "263 Brownlie Road, Upper Merion Township, PA",
+      "s1_country": "US",
+      "target_id": "S2-948662239",
+      "target_name": ">> Prova Capital",
+      "target_addr": "263 BROWNLIE RD, KING OF PRUSSIA, PA",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-103079635",
+      "s1_name": "Diamond Heritage Crescent",
+      "s1_addr": "2027 3rd Avenue, Unit APT 2, Altoona, PA",
+      "s1_country": "US",
+      "target_id": "S2-204391476",
+      "target_name": "Diamond  Heritage Crescent",
+      "target_addr": "2027 THIRD AVE, ALTOONA, PA",
+      "target_country": "US"
+    }
+  ],
+  "transliteration_script_mismatch": [
+    {
+      "s1_id": "S1-919245976",
+      "s1_name": "Ardath Martin Freedom Inc",
+      "s1_addr": "2293 White Pine Point Court, Pine River, MN",
+      "s1_country": "US",
+      "target_id": "S2-754120612",
+      "target_name": "ARDATH MARTIN FRÉEDOM INC",
+      "target_addr": "2293  WHITE PINE POINT CT, PINE RIVER, MN",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-242819014",
+      "s1_name": "Raba Memorial Trust",
+      "s1_addr": "Gala No.27, Ph-I Parmar Ind.Est, Waliv, Vasai, Thane, Maharashtra",
+      "s1_country": "India",
+      "target_id": "S3-135549877",
+      "target_name": "Shri Raba Mémorial Trust",
+      "target_addr": "No B3/27, Ph-i Parmar Ind.est, Waliv, Vasai, Thane, MH",
+      "target_country": "India"
+    },
+    {
+      "s1_id": "S1-902181206",
+      "s1_name": "Services Samarth Systems Private Limited",
+      "s1_addr": "Krishna Bhuvan, Block No. 3, 67, Nehru Road, Vile Parle (East), Mumbai, Mumbai City, Maharashtra",
+      "s1_country": "India",
+      "target_id": "S2-328014530",
+      "target_name": "SERVICES SAMARTH SYSTEMS PRIVATE LÍMITED",
+      "target_addr": "KRISHNA BHUVAN, BLOCK NO. 3, 67, NEHRU ROAD, VILE PARLE (EAST), MUMBAI, Maharashtra",
+      "target_country": "India"
+    },
+    {
+      "s1_id": "S1-43192815",
+      "s1_name": "Sree Properties Limited",
+      "s1_addr": "1088, Ravivar Peth, Manish Market, Shop No.12 & 13, Pune, Maharashtra",
+      "s1_country": "India",
+      "target_id": "S3-719836883",
+      "target_name": "श्री प्रॉपर्टीज लिमिटेड",
+      "target_addr": "Bock E-521 1088, Ravivar Peth, Manish Market, Shop No.12 & 13, Pune, MH",
+      "target_country": "India"
+    },
+    {
+      "s1_id": "S1-189181683",
+      "s1_name": "Bharat Properties Private Limited",
+      "s1_addr": "Left Side, 3Rd Floor P-163, Cit Road Scheme Viim, Kolkata, Kolkata, Howrah, West Bengal",
+      "s1_country": "India",
+      "target_id": "S2-167269529",
+      "target_name": "ভারত প্রপার্টিজ প্রাইভেট লিমিটেড",
+      "target_addr": "LEFT SIDE, 3RD FLOOR P-163, CIT ROAD SCHEME VIIM, KOLKATA, CALCUTTA, HOWRAH, পশ্চিমবঙ্গ",
+      "target_country": "India"
+    },
+    {
+      "s1_id": "S1-240329925",
+      "s1_name": "Naab Colonial Adamas, LLC",
+      "s1_addr": "5014 Laura Lee Lane, Pasadena, TX",
+      "s1_country": "US",
+      "target_id": "S3-345756436",
+      "target_name": "Naab Colonial Ádamas, LLC",
+      "target_addr": "5014 Lura Lee Ln, Pasadena, Texas",
+      "target_country": "US"
+    }
+  ],
+  "partial_or_missing_address": [
+    {
+      "s1_id": "S1-471338762",
+      "s1_name": "S P & T Forefront Inc",
+      "s1_addr": "5113 Prairie Trl, Marion, IA",
+      "s1_country": "US",
+      "target_id": "S2-867758389",
+      "target_name": "S P and T  Forefront Inc",
+      "target_addr": "",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-240329925",
+      "s1_name": "Naab Colonial Adamas, LLC",
+      "s1_addr": "5014 Laura Lee Lane, Pasadena, TX",
+      "s1_country": "US",
+      "target_id": "S3-571853700",
+      "target_name": "The Naab Colonial Adamas, LLC",
+      "target_addr": "",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-240329925",
+      "s1_name": "Naab Colonial Adamas, LLC",
+      "s1_addr": "5014 Laura Lee Lane, Pasadena, TX",
+      "s1_country": "US",
+      "target_id": "S3-644594282",
+      "target_name": "Naab Colonial Adamas,",
+      "target_addr": "",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-899586082",
+      "s1_name": "Good Services",
+      "s1_addr": "C42 B N Industrial Estate, Nr Gidc Kathwada Gate 5, Ahmedabad, Gujarat",
+      "s1_country": "India",
+      "target_id": "S3-773513512",
+      "target_name": "Good Center Trading",
+      "target_addr": "",
+      "target_country": "India"
+    },
+    {
+      "s1_id": "S1-447649528",
+      "s1_name": "Naya Industries Limited",
+      "s1_addr": "23-5-108, Nayudupet 1St Line, Guntur, Andhra Pradesh",
+      "s1_country": "India",
+      "target_id": "S3-338653036",
+      "target_name": "Naya lndustries  Limited",
+      "target_addr": "",
+      "target_country": "India"
+    },
+    {
+      "s1_id": "S1-391301672",
+      "s1_name": "Martin & Engel",
+      "s1_addr": "IL, 24 Coates Street, Freeport",
+      "s1_country": "US",
+      "target_id": "S2-518164330",
+      "target_name": "Martin &  Engel",
+      "target_addr": "",
+      "target_country": "US"
+    }
+  ],
+  "hardest_true_matches_low_similarity": [
+    {
+      "s1_id": "S1-88616334",
+      "s1_name": "Torres Coffee LLC",
+      "s1_addr": "330 Seventh Street, Flatonia, TX",
+      "s1_country": "US",
+      "target_id": "S3-369793064",
+      "target_name": "t0rrescoffee.com",
+      "target_addr": "330 7th St, Flatonia Township, Texas",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-858789829",
+      "s1_name": "Garcia Manufacturing Clinic",
+      "s1_addr": "137 Center Street, Redlands, CA",
+      "s1_country": "US",
+      "target_id": "S3-639489092",
+      "target_name": "garciamanufacturingclinic.com",
+      "target_addr": "California, Redlands, 137 Cener St",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-522766279",
+      "s1_name": "Valley Green Abony Inc",
+      "s1_addr": "NY, 8128 7, Maryland",
+      "s1_country": "US",
+      "target_id": "S3-791965441",
+      "target_name": "va1leygreenabony.com - 7339232243",
+      "target_addr": "8128 7, Schenevus, New York",
+      "target_country": "US"
+    },
+    {
+      "s1_id": "S1-406694841",
+      "s1_name": "Silver It Private Limited",
+      "s1_addr": "South Side Of G T Road, Bulandshahar Road Industrial Area, Uttar Pradesh, Ghaziabad, Plot No. 3",
+      "s1_country": "India",
+      "target_id": "S2-546894434",
+      "target_name": "सिल्वर आईटी प्राइवेट लिमिटेड",
+      "target_addr": "NO 9-3, NULL, GHAZIABAD, Uttar Pradesh",
+      "target_country": "India"
+    },
+    {
+      "s1_id": "S1-406694841",
+      "s1_name": "Silver It Private Limited",
+      "s1_addr": "South Side Of G T Road, Bulandshahar Road Industrial Area, Uttar Pradesh, Ghaziabad, Plot No. 3",
+      "s1_country": "India",
+      "target_id": "S2-803047060",
+      "target_name": "सिल्वर आईटी प्राइवेट लिमिटेड",
+      "target_addr": "DOOR NO 9-3, NULL, GHAZIABAD, Uttar Pradesh",
+      "target_country": "India"
+    },
+    {
+      "s1_id": "S1-321880159",
+      "s1_name": "Murrell, Upson and Lopez Corp",
+      "s1_addr": "2332 Pinehurst Place, Ontario, CA",
+      "s1_country": "US",
+      "target_id": "S2-559961685",
+      "target_name": "upsonmurrelllopez.com",
+      "target_addr": "ONTARO, CA, PINEHURST PL",
+      "target_country": "US"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "test_source1": {
+    "sample_rows": 1000000,
+    "france_rows_in_sample": 149496,
+    "france_pct_of_sample": 14.9496,
+    "name_len_mean": 19.42,
+    "addr_len_mean": 50.08,
+    "name_accented_pct": 15.71,
+    "addr_has_5digit_postal_pct": 0.396,
+    "fr_legal_suffix_pct": {
+      "sarl": 28.245,
+      "sas": 20.241,
+      "s.a.s": 0.0,
+      "eurl": 6.589,
+      "sci": 3.24,
+      "sasu": 4.155,
+      "sa": 4.819
+    },
+    "sample_names": [
+      "Lège-Cap-Ferret Societe SARL",
+      "Lille Anciens SARL",
+      "Pacific (France) Sportive SAS",
+      "Association des Saad",
+      "Pharmacie du Madeleine",
+      "Club du Kanopee",
+      "Maison de Santé Pilates",
+      "Clément Club SARL",
+      "Fédération du Sapeurs",
+      "Lamitie & Fils SCI"
+    ],
+    "sample_addresses": [
+      "7 Allee Chanteclerc, Lège-Cap-Ferret, Nouvelle-Aquitaine",
+      "125 BIS Avenue de Dunkerque, Lille, Hauts-de-France",
+      "43 Rue Louis Aragon, Mérignac, Nouvelle-Aquitaine",
+      "35 Rue de la Croix Fraîche, Saint-Nazaire, Pays de la Loire",
+      "37 Rue des Augustins, Bordeaux, Nouvelle-Aquitaine",
+      "1 PL Sainte Eulalie, Bordeaux, Nouvelle-Aquitaine",
+      "52 Rue Breau, Bordeaux, Nouvelle-Aquitaine",
+      "26 Rue Roullet, Bordeaux, Nouvelle-Aquitaine",
+      "10 Avenue de Bourranville, Mérignac, Nouvelle-Aquitaine",
+      "La Baule-Escoublac, Pays de la Loire, 14 Avenue Jean-Pierre Beltoise"
+    ]
+  },
+  "test_source2": {
+    "sample_rows": 1000000,
+    "france_rows_in_sample": 143763,
+    "france_pct_of_sample": 14.3763,
+    "name_len_mean": 21.11,
+    "addr_len_mean": 39.52,
+    "name_accented_pct": 24.546,
+    "addr_has_5digit_postal_pct": 0.492,
+    "fr_legal_suffix_pct": {
+      "sarl": 19.945,
+      "sas": 14.06,
+      "s.a.s": 0.0,
+      "eurl": 5.862,
+      "sci": 3.939,
+      "sasu": 4.451,
+      "sa": 4.908
+    },
+    "sample_names": [
+      "LM",
+      "Comité des Enfant",
+      "SARL Famili Comite",
+      "gym sante sas",
+      "Ptit Anciens SAS",
+      "Fédération Sports de",
+      "École primaire Sainte Jean",
+      "Sport du Mîni",
+      "NATIONALE UNION SASU",
+      "NL Sânte SASU"
+    ],
+    "sample_addresses": [
+      "39 RUE PELLART, Roubaix",
+      "# 172 RUE DE LILLE, TOURCOING",
+      "#50 RUE SAITE-BEUVE, Calais",
+      "4 RUE AUGUSTE MOURCOU, LILLE, Nord",
+      "BORDEAUX, 96 Q. DE BACALAN, Gironde, TAOZEN 1",
+      "2 BOULEVARD FRANCOIS BAANCHO, NANTES, Pays de la Loire",
+      "LA TESTE-DE-BUCH, 1A R. JEAN DE GRAILLY",
+      "47 R. JESN SAINT-MARC, LA TESTE-DE-BUCH, Gironde",
+      "1 ALL. DES CHÂTAIGNIESR, LA BAULE-ESCOUBLAC, Pays de la Loire",
+      "191 COURS DE L'ARGONNE, Nouvelle-Aquitaine, BORDEAUX"
+    ]
+  },
+  "test_source3": {
+    "sample_rows": 1000000,
+    "france_rows_in_sample": 143260,
+    "france_pct_of_sample": 14.326,
+    "name_len_mean": 21.14,
+    "addr_len_mean": 39.98,
+    "name_accented_pct": 23.926,
+    "addr_has_5digit_postal_pct": 0.525,
+    "fr_legal_suffix_pct": {
+      "sarl": 19.803,
+      "sas": 13.783,
+      "s.a.s": 0.0,
+      "eurl": 5.796,
+      "sci": 3.768,
+      "sasu": 4.408,
+      "sa": 4.802
+    },
+    "sample_names": [
+      "Gt Acmmfhle SAS",
+      "Horizons",
+      "Secours (France) Club SARL",
+      "Mission Comite Sci",
+      "Moov Pharmacie SNC",
+      "mérignac loisirs sci",
+      "Encore Futsal Maternelle EURL",
+      "Vivre & Cie Sàrl",
+      "FRELONS CULTURE EURL",
+      "Noyen Culturelle SARL"
+    ],
+    "sample_addresses": [
+      "022 Rue Des Ecoles, Lille",
+      "16 RUE du Frere Louis, Nantes, Pays de la Loire",
+      "No 5 R De Licourne, Bordeaux",
+      "10 Rue Flandres Dunkerque 40, Nantes, Loire-Atlantique",
+      "55 Lotissement Les Solariales, La Teste-de-buch, Nouvelle-Aquitaine",
+      "Merignac, Gironde, 14 Allee Des Lauriers",
+      "61 Rue Armand Meeschaert, Roubaix, Nord",
+      "1 Imp. Des Pignons, La Teste-de-buch, Gironde",
+      "N° 10 Avenue Bouchcrdat, La Baule-escoublac, Loire-Atlantique",
+      "10 Av. Du Congre, Lege-cap-ferret, Nouvelle-Aquitaine"
+    ]
+  }
+}

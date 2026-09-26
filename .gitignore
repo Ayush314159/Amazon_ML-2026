@@ -5,6 +5,10 @@
 # Generated profiling reports (large HTML, regenerable from EDA scripts)
 *_profile.html
 
+# Regenerable analysis caches (large, reproducible from the scripts described in
+# analysis/*.md — the small JSON summaries in analysis/ ARE versioned, these are not)
+analysis/*.parquet
+
 # Python
 __pycache__/
 *.pyc

@@ -1,0 +1,14 @@
+{
+  "source2": {
+    "groups_checked": 2000,
+    "ambiguous_found": 8,
+    "source": "reused prior sample, not reloaded"
+  },
+  "source3_sampled": {
+    "sample_rows": 1000000,
+    "unique_norm_names_in_sample": 860313,
+    "pct_sample_rows_sharing_norm_name": 18.286,
+    "groups_checked": 1500,
+    "ambiguous_found": 8
+  }
+}

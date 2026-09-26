@@ -102,6 +102,18 @@ available):
   expensive on this machine (12 CPU cores, ~16 GB RAM, **no GPU** — see
   `PROJECT_STATE.md` §5 for current numbers, which should be re-checked periodically
   rather than assumed to be fixed).
+- **Resource-efficiency rule (learned the hard way during Phase 1 — see
+  `PROJECT_STATE.md` §5 for the incident):** default to a single bounded sample (e.g.
+  `nrows=1_000_000`, after confirming row order isn't grouped in a way that would bias
+  the sample) for exploratory statistics on the 5M+/5.3M-row source2/source3 files, not
+  a full-file load with many chained column-wide operations. Reserve a genuine
+  full-dataset pass for numbers that are cheap (the 122MB ground truth) or that a
+  sample truly cannot answer reliably enough. **Never run more than one memory-heavy
+  data-loading pass concurrently** — this machine's ~16GB RAM was observed to drop to
+  ~1.3GB free during a single full-file profiling pass over one 5M-row source file,
+  with no other heavy process running at the same time. Free memory (`del` +
+  `gc.collect()`) before starting the next file/stage rather than holding multiple
+  large DataFrames alive at once.
 - Do not speculate about facts that can be directly checked (row counts, column
   contents, library availability, hardware) — inspect and report the real numbers.
   `PROJECT_STATE.md` should reflect what was actually verified, not assumptions.
